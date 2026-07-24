@@ -1,6 +1,4 @@
-// ===============================
-// STORAGE.JS - FIRESTORE CRUD
-// ===============================
+
 
 import { db } from "./firebase.js";
 
@@ -19,9 +17,7 @@ import {
 const funcionariosCollection = collection(db, "funcionarios");
 
 
-// ===============================
-// CREATE - ADICIONAR FUNCIONÁRIO
-// ===============================
+
 
 export async function adicionarFuncionario(funcionario) {
 
@@ -40,9 +36,7 @@ export async function adicionarFuncionario(funcionario) {
 }
 
 
-// ===============================
-// READ - LISTAR TODOS
-// ===============================
+
 
 export async function listarFuncionarios() {
 
@@ -71,9 +65,7 @@ export async function listarFuncionarios() {
 }
 
 
-// ===============================
-// READ - BUSCAR UM FUNCIONÁRIO
-// ===============================
+
 
 export async function buscarFuncionario(id) {
 
@@ -117,9 +109,7 @@ export async function buscarFuncionario(id) {
 }
 
 
-// ===============================
-// UPDATE - ATUALIZAR FUNCIONÁRIO
-// ===============================
+
 
 export async function atualizarFuncionario(id, dados) {
 
@@ -146,9 +136,7 @@ export async function atualizarFuncionario(id, dados) {
 }
 
 
-// ===============================
-// DELETE - EXCLUIR FUNCIONÁRIO
-// ===============================
+
 
 export async function excluirFuncionario(id) {
 
