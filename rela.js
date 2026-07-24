@@ -18,9 +18,6 @@ import {
 
 
 
-// ==========================================
-// INICIAR
-// ==========================================
 
 
 window.onload = function(){
@@ -37,9 +34,7 @@ window.onload = function(){
 
 
 
-// ==========================================
-// CARREGAR RELATÓRIOS
-// ==========================================
+
 
 
 async function carregarRelatorios(){
@@ -48,10 +43,7 @@ async function carregarRelatorios(){
     try{
 
 
-        // ==============================
-        // FUNCIONÁRIOS
-        // ==============================
-
+        
 
         const funcionariosSnap = await getDocs(
             collection(db,"funcionarios")
@@ -80,8 +72,7 @@ async function carregarRelatorios(){
 
 
 
-        // TOTAL FUNCIONÁRIOS
-
+        
 
         document.getElementById(
             "totalFuncionarios"
@@ -98,10 +89,6 @@ async function carregarRelatorios(){
 
 
 
-
-// ==============================
-// TREINAMENTOS
-// ==============================
 
 
 const treinamentosSnap = await getDocs(
@@ -120,7 +107,7 @@ treinamentosSnap.forEach(doc=>{
 
 
 
-    // BUSCA O FUNCIONÁRIO PELO ID
+    
 
     let funcionario = funcionarios.find(
         f => f.id === dados.idFuncionario
@@ -214,9 +201,7 @@ treinamentosSnap.forEach(doc=>{
 
 
 
-// ==========================================
-// FUNCIONÁRIOS POR SETOR
-// ==========================================
+
 
 
 function carregarSetores(funcionarios){
@@ -303,9 +288,6 @@ function carregarSetores(funcionarios){
 
 
 
-// ==========================================
-// STATUS DOS TREINAMENTOS
-// ==========================================
 
 
 function calcularTreinamentos(lista){
@@ -399,9 +381,7 @@ function calcularTreinamentos(lista){
 
 
 
-// ==========================================
-// RANKING DE CURSOS
-// ==========================================
+
 
 
 function rankingCursos(lista){
@@ -494,14 +474,7 @@ function rankingCursos(lista){
 
 
 
-// ==========================================
-// ÚLTIMOS TREINAMENTOS
-// ==========================================
 
-
-// ==========================================
-// TREINAMENTOS POR INSTITUIÇÃO
-// ==========================================
 
 function mostrarInstituicoes(lista){
 
