@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Treinamentos - NovaEra Alimentos</title>
+
+    <link rel="stylesheet" href="treinamento.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<main class="conteudo">
+
+    <!-- TOPO -->
+
+    <div class="topo-pagina">
+
+        <div>
+
+            <h1>
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                Gestão de Treinamentos
+
+            </h1>
+
+            <p>
+
+                Gerencie todos os treinamentos dos funcionários.
+
+            </p>
+
+        </div>
+
+        <button class="btn-voltar" onclick="voltarDashboard()">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Voltar
+
+        </button>
+
+    </div>
+
+
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-book"></i>
+
+            <h3>Total Treinamentos</h3>
+
+            <h1 id="totalTreinamentos">0</h1>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Pendentes</h3>
+
+            <h1 id="totalPendentes">0</h1>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-spinner"></i>
+
+            <h3>Em andamento</h3>
+
+            <h1 id="totalAndamento">0</h1>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Concluídos</h3>
+
+            <h1 id="totalConcluidos">0</h1>
+
+        </div>
+
+    </section>
+
+
+
+    
+
+
+
+    <!-- FILTROS -->
+
+    <section class="filtros">
+
+        <button onclick="filtrarStatus('Todos')">Todos</button>
+
+        <button onclick="filtrarStatus('Pendente')">Pendentes</button>
+
+        <button onclick="filtrarStatus('Em andamento')">Em andamento</button>
+
+        <button onclick="filtrarStatus('Concluído')">Concluídos</button>
+
+    </section>
+
+
+
+    <!-- TABELA -->
+
+    <section class="tabela">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Funcionário</th>
+
+                    <th>Curso</th>
+
+                    <th>Instituição</th>
+
+                    <th>Início</th>
+
+                    <th>Conclusão</th>
+
+                    <th>Status</th>
+
+                    <th>Alterar Status</th>
+
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tbodyTreinamentos">
+
+                <!-- Firebase -->
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+   
+
+
+
+    
+
+        <button class="btn-acao" onclick="window.print()">
+
+            <i class="fa-solid fa-print"></i>
+
+            Imprimir
+
+        </button>
+
+    </section>
+
+
+
+</main>
+
+
+
+<script>
+
+function voltarDashboard(){
+
+    window.location.href="index.html";
+
+}
+
+</script>
+
+<script type="module" src="treinamento.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,601 @@
+/* ==============================
+   CURSOS E INSTITUIÇÕES - LIGHT
+============================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', Arial, sans-serif;
+}
+
+
+
+/* ==============================
+   FUNDO
+============================== */
+
+
+body{
+
+    background:#f5f7fb;
+
+    color:#1e293b;
+
+    min-height:100vh;
+
+}
+
+
+
+/* ==============================
+   TOPO
+============================== */
+
+
+.topo{
+
+
+    width:100%;
+
+    padding:25px 40px;
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    background:white;
+
+
+    box-shadow:0 3px 15px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+.topo h1{
+
+
+    font-size:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+
+    color:#1e293b;
+
+
+}
+
+
+
+.topo h1 i{
+
+
+    color:#2563eb;
+
+    font-size:32px;
+
+
+}
+
+
+
+
+
+/* ==============================
+   BOTÃO VOLTAR
+============================== */
+
+
+.btn-voltar{
+
+
+    background:#2563eb;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:12px 25px;
+
+
+    border-radius:10px;
+
+
+    cursor:pointer;
+
+
+    font-size:15px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn-voltar:hover{
+
+
+    background:#1d4ed8;
+
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+
+
+
+/* ==============================
+   PESQUISA
+============================== */
+
+
+.pesquisa{
+
+
+    width:90%;
+
+
+    max-width:900px;
+
+
+    margin:35px auto;
+
+
+}
+
+
+
+.pesquisa input{
+
+
+    width:100%;
+
+
+    padding:15px 20px;
+
+
+    border-radius:12px;
+
+
+    border:1px solid #e2e8f0;
+
+
+    outline:none;
+
+
+    font-size:16px;
+
+
+    background:white;
+
+
+    color:#1e293b;
+
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+.pesquisa input::placeholder{
+
+
+    color:#94a3b8;
+
+
+}
+
+
+
+
+
+/* ==============================
+   ÁREA DOS CARDS
+============================== */
+
+
+#listaCursos{
+
+
+    width:90%;
+
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+
+    gap:25px;
+
+
+    padding-bottom:50px;
+
+
+}
+
+
+
+
+
+/* ==============================
+   CARD CURSO
+============================== */
+
+
+.card-curso{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:18px;
+
+
+    border-left:5px solid #2563eb;
+
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.card-curso:hover{
+
+
+    transform:translateY(-5px);
+
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+
+.card-curso h2{
+
+
+    color:#2563eb;
+
+
+    font-size:22px;
+
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+
+.card-curso p{
+
+
+    margin:12px 0;
+
+
+    color:#64748b;
+
+
+    line-height:1.5;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+.card-curso b{
+
+
+    color:#1e293b;
+
+
+}
+
+
+
+
+
+/* ==============================
+   TAGS
+============================== */
+
+
+.tag-online,
+.tag-presencial,
+.tag-hibrido{
+
+
+    display:inline-block;
+
+
+    margin-top:15px;
+
+
+    padding:7px 15px;
+
+
+    border-radius:20px;
+
+
+    font-size:13px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+.tag-online{
+
+
+    background:#dcfce7;
+
+
+    color:#166534;
+
+
+}
+
+
+
+
+.tag-presencial{
+
+
+    background:#dbeafe;
+
+
+    color:#1d4ed8;
+
+
+}
+
+
+
+
+.tag-hibrido{
+
+
+    background:#fef3c7;
+
+
+    color:#92400e;
+
+
+}
+
+
+
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+
+@media(max-width:700px){
+
+
+.topo{
+
+
+    padding:20px;
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+.topo h1{
+
+
+    font-size:23px;
+
+
+}
+
+
+
+#listaCursos{
+
+
+    width:95%;
+
+
+}
+
+
+
+.card-curso{
+
+
+    padding:20px;
+
+
+}
+
+
+}
+
+/* ==============================
+   RODAPÉ DO CARD
+============================== */
+
+
+.rodape-card{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/* ==============================
+   TAG MODALIDADE
+============================== */
+
+
+.tag-online,
+.tag-presencial,
+.tag-hibrido{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+
+    padding:8px 14px;
+
+
+    border-radius:20px;
+
+
+    font-size:13px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+.tag-online{
+
+
+    background:#dcfce7;
+
+    color:#166534;
+
+
+}
+
+
+
+
+
+/* ==============================
+   BOTÃO SITE
+============================== */
+
+
+.btn-site{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:8px;
+
+
+    background:#2563eb;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    padding:10px 18px;
+
+
+    border-radius:10px;
+
+
+    font-size:14px;
+
+
+    font-weight:500;
+
+
+    transition:0.3s;
+
+
+}
+
+
+
+.btn-site:hover{
+
+
+    background:#1d4ed8;
+
+
+    transform:translateY(-3px);
+
+
+    box-shadow:0 5px 12px rgba(37,99,235,0.3);
+
+
+}

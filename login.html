@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaEra Alimentos</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:linear-gradient(135deg,#1E3A8A,#2563EB);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .login{
+            width:400px;
+            background:#fff;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 15px 35px rgba(0,0,0,.25);
+            text-align:center;
+        }
+
+        .logo{
+            width:80px;
+            height:80px;
+            margin:auto;
+            border-radius:50%;
+            background:#2563EB;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:35px;
+            margin-bottom:20px;
+        }
+
+        h1{
+            color:#1E3A8A;
+            margin-bottom:5px;
+        }
+
+        p{
+            color:#666;
+            margin-bottom:25px;
+        }
+
+        .input{
+            width:100%;
+            margin-bottom:18px;
+        }
+
+        .input input{
+            width:100%;
+            padding:14px;
+            border:1px solid #ccc;
+            border-radius:10px;
+            outline:none;
+            transition:.3s;
+        }
+
+        .input input:focus{
+            border-color:#2563EB;
+        }
+
+        button{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            background:#2563EB;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        button:hover{
+            background:#1E40AF;
+        }
+
+        .demo{
+            margin-top:20px;
+            background:#EFF6FF;
+            padding:15px;
+            border-radius:10px;
+            font-size:14px;
+        }
+
+        .erro{
+            margin-top:15px;
+            color:red;
+            display:none;
+        }
+
+        .mensagem{
+
+            margin-top:15px;
+
+            color:#16a34a;
+
+            font-weight:600;
+
+            display:none;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login">
+
+        <div class="logo">
+            🎓
+        </div>
+
+        <h1>NovaEra Alimentos</h1>
+
+        <p>Sistema Inteligente de Gestão de Capacitação</p>
+
+        <div class="input">
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Usuário">
+        </div>
+
+        <div class="input">
+            <input
+                type="password"
+                id="senha"
+                placeholder="Senha">
+        </div>
+
+        <button onclick="login()">
+            Entrar
+        </button>
+
+        <div class="mensagem" id="mensagem"></div>
+
+
+        <div class="erro" id="erro">
+            Usuário ou senha incorretos.
+        </div>
+
+        
+    </div>
+
+<script>
+
+function login(){
+
+    let usuario = document.getElementById("usuario").value;
+
+    let senha = document.getElementById("senha").value;
+
+
+    if(usuario=="admin" && senha=="1357"){
+
+
+        let mensagem = document.getElementById("mensagem");
+
+
+        mensagem.innerHTML = "✅ Login realizado com sucesso!";
+
+        mensagem.style.display="block";
+
+
+        // salva usuário logado
+        localStorage.setItem("usuarioLogado", usuario);
+
+
+
+        setTimeout(()=>{
+
+            window.location="index.html";
+
+        },1500);
+
+
+
+    }
+
+
+    else{
+
+
+        document.getElementById("erro").style.display="block";
+
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

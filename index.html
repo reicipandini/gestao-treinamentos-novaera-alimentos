@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaEra Alimentos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- MENU -->
+
+    <aside class="menu">
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>NovaEra Alimentos</h2>
+        </div>
+
+        <ul>
+
+            <li class="ativo"><i class="fa-solid fa-house"></i> Dashboard</li>
+            <li onclick="window.location.href='fun.html'"> 
+                <i class="fa-solid fa-users"></i> Funcionários
+            </li>
+            <li onclick="window.location.href='cursos.html'">
+                <i class="fa-solid fa-users"></i> Instituições
+            </li>
+            
+            <li onclick="window.location.href='rela.html'"> 
+                <i class="fa-solid fa-users"></i> relatorios
+            </li>
+             <li onclick="window.location.href='treinamento.html'"> 
+                <i class="fa-solid fa-users"></i> treinamentos
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Bem-vindo ao sistema de funcionários da NovaEra Alimentos.</p>
+            </div>
+
+            <div class="usuarioArea">
+
+                <div class="usuario">
+                    <i class="fa-solid fa-user"></i>
+
+                    <div>
+                        <strong id="nomeUsuario">
+                            Administrador
+                        </strong>
+
+                        <small>
+                            Online
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <button class="btnSair" onclick="sair()">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Sair
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- CARDS -->
+
+        <section class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-users"></i>
+                <h3>Total Funcionários</h3>
+                <h1 id="totalFuncionarios">0</h1>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3> cursos Concluídos</h3>
+                <h1 id="totalConcluidos">0</h1>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-spinner"></i>
+                <h3>Em andamento</h3>
+                <h1 id="totalAndamento">0</h1>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h3>Pendentes</h3>
+                <h1 id="totalPendentes">0</h1>
+            </div>
+
+        </section>
+
+        <!-- CADASTRO -->
+
+        <section class="cadastro">
+
+            <h2>
+                <i class="fa-solid fa-user-plus"></i>
+                Cadastro de Funcionário
+            </h2>
+
+            <div class="form">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome do Funcionário">
+
+
+                <input
+                    type="text"
+                    id="cpf"
+                    placeholder=" CPF: 000.000.000-00"
+                    maxlength="14"
+                    oninput="mascaraCPF(this)"
+                >
+
+                <!-- Cargo -->
+
+                <select id="cargo">
+
+                    <option value="">Selecione o Cargo</option>
+
+                    <option value="Auxiliar de Produção">Auxiliar de Produção</option>
+
+                    <option value="Operador de Máquinas">Operador de Máquinas</option>
+
+                    <option value="Inspetor de Qualidade">Inspetor de Qualidade</option>
+
+                    <option value="Analista de Qualidade">Analista de Qualidade</option>
+
+                    <option value="Supervisor de Produção">Supervisor de Produção</option>
+
+                    <option value="Coordenador de Produção">Coordenador de Produção</option>
+
+                    <option value="Técnico em Alimentos">Técnico em Alimentos</option>
+
+                    <option value="Engenheiro de Alimentos">Engenheiro de Alimentos</option>
+
+                    <option value="Gerente Industrial">Gerente Industrial</option>
+
+                    <option value="Auxiliar de Limpeza">Auxiliar de Limpeza</option>
+
+                </select>
+
+                <!-- Setor -->
+
+                <select id="setor">
+
+                    <option value="">Selecione o Setor</option>
+
+                    <option value="Produção">Produção</option>
+
+                    <option value="Controle de Qualidade">Controle de Qualidade</option>
+
+                    <option value="Laboratório">Laboratório</option>
+
+                    <option value="Logística">Logística</option>
+
+                    <option value="Expedição">Expedição</option>
+
+                    <option value="Manutenção">Manutenção</option>
+
+                    <option value="Compras">Compras</option>
+
+                    <option value="RH">Recursos Humanos</option>
+
+                    <option value="Administrativo">Administrativo</option>
+
+                    <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+
+                </select>
+
+                <div class="tempoEmpresa">
+
+                    <input
+                        type="number"
+                        id="tempoEmpresa"
+                        placeholder="Tempo">
+
+                    <select id="tipoTempo">
+
+                        <option value="Meses">Meses</option>
+
+                        <option value="Anos">Anos</option>
+
+                    </select>
+
+                </div>
+
+                <select id="dificuldade">
+
+                    <option value="">Selecione a dificuldade</option>
+
+                    <option value="APPCC">APPCC (HACCP)</option>
+                    <option value="BPF">Boas Práticas de Fabricação (BPF)</option>
+                    <option value="POP">Procedimentos Operacionais Padronizados (POP)</option>
+                    <option value="ISO22000">ISO 22000</option>
+                    <option value="FSSC22000">FSSC 22000</option>
+                    <option value="AnaliseSensorial">Análise Sensorial</option>
+                    <option value="Microbiologia">Microbiologia de Alimentos</option>
+                    <option value="TecnologiaProcessamento">Tecnologia de Processamento</option>
+                    <option value="Rastreabilidade">Rastreabilidade</option>
+                    <option value="ControleQualidade">Controle de Qualidade</option>
+
+                </select>
+
+                <button onclick="cadastrarFuncionario()">
+                    Cadastrar
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- PESQUISA -->
+
+        <section class="pesquisa">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar funcionário...">
+
+        </section>
+
+        <!-- TABELA -->
+
+        <section class="tabela">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Cargo</th>
+                        <th>Setor</th>
+                        <th>Tempo Empresa</th>
+                        <th>dificuldade</th>
+                        <th>Curso Recomendado</th>
+                        <th>editar</th>
+                        <th>excluir</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        
+        <section class="recomendacao">
+
+            <h2>
+
+                <i class="fa-solid fa-brain"></i>
+
+                Recomendação Inteligente
+
+            </h2>
+
+            <div id="resultadoIA">
+
+                Selecione um funcionário para visualizar a recomendação.
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script type="module" src="create.js"></script>
+<script type="module" src="read.js"></script>
+<script type="module" src="update.js"></script>
+<script type="module" src="delete.js"></script>
+<script type="module" src="ia.js"></script>
+<script type="module" src="script.js"></script>
+</body>
+</html>

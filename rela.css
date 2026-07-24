@@ -1,0 +1,334 @@
+/* =====================================
+   RELATÓRIOS - NOVAERA ALIMENTOS
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#1e293b;
+}
+
+/* =====================================
+   CONTEÚDO
+===================================== */
+
+.conteudo{
+    padding:35px;
+}
+
+/* =====================================
+   TOPO
+===================================== */
+
+.topo-pagina{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topo-pagina h1{
+
+    font-size:32px;
+    color:#1e293b;
+
+}
+
+.topo-pagina h1 i{
+
+    color:#2563eb;
+    margin-right:10px;
+
+}
+
+/* =====================================
+   BOTÃO
+===================================== */
+
+.btn-voltar{
+
+    background:#2563eb;
+    color:#fff;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.btn-voltar:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================
+   CARDS
+===================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border-left:5px solid #2563eb;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.card i{
+
+    font-size:28px;
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+.card h1{
+
+    font-size:38px;
+
+    color:#1e293b;
+
+}
+
+/* =====================================
+   PAINEL
+===================================== */
+
+.painel{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+
+    gap:25px;
+
+}
+
+/* =====================================
+   BLOCOS
+===================================== */
+
+.bloco{
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+}
+
+.bloco h2{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+/* =====================================
+   TABELAS
+===================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    padding:12px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:12px;
+
+    border-bottom:1px solid #e2e8f0;
+
+    color:#475569;
+
+}
+
+tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* =====================================
+   BOTÕES EXPORTAR
+===================================== */
+
+.btn-exportar{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.btn-exportar i{
+
+    margin-right:8px;
+
+}
+
+.btn-exportar:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media(max-width:900px){
+
+.topo-pagina{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.painel{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.conteudo{
+
+    padding:20px;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.card h1{
+
+    font-size:32px;
+
+}
+
+.bloco{
+
+    padding:18px;
+
+}
+
+table{
+
+    font-size:14px;
+
+}
+
+}

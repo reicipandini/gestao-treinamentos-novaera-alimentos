@@ -1,0 +1,219 @@
+/* ===========================================
+   GERAL
+=========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#1e293b;
+}
+
+
+/* ===========================================
+   CONTEÚDO
+=========================================== */
+
+.conteudo{
+    max-width:1200px;
+    margin:auto;
+    padding:35px;
+}
+
+
+/* ===========================================
+   TOPO
+=========================================== */
+
+.topo-pagina{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.topo-pagina h1{
+    font-size:32px;
+    color:#1e293b;
+}
+
+
+/* ===========================================
+   BOTÃO
+=========================================== */
+
+.btn-voltar{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:12px 22px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-voltar:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+
+/* ===========================================
+   LISTA DOS FUNCIONÁRIOS
+=========================================== */
+
+.lista-funcionarios{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+}
+
+
+/* ===========================================
+   CARD
+=========================================== */
+
+.card-funcionario{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border-left:6px solid #2563eb;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card-funcionario:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+.card-funcionario h2{
+
+    color:#2563eb;
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+}
+
+.card-funcionario p{
+
+    margin:10px 0;
+
+    color:#475569;
+
+    line-height:1.5;
+
+}
+
+.card-funcionario b{
+
+    color:#1e293b;
+
+}
+
+
+/* ===========================================
+   TAG DO CURSO
+=========================================== */
+
+.curso{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:8px 16px;
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+
+/* ===========================================
+   SEM FUNCIONÁRIOS
+=========================================== */
+
+.lista-funcionarios h2{
+
+    grid-column:1/-1;
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+/* ===========================================
+   RESPONSIVO
+=========================================== */
+
+@media(max-width:768px){
+
+    .conteudo{
+
+        padding:20px;
+
+    }
+
+    .topo-pagina{
+
+        flex-direction:column;
+        align-items:flex-start;
+
+    }
+
+    .topo-pagina h1{
+
+        font-size:26px;
+
+    }
+
+    .lista-funcionarios{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
