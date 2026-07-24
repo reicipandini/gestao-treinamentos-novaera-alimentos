@@ -6,18 +6,14 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 
-// Array dos funcionários
+
 let funcionarios = [];
 
 
-// Carrega funcionários quando abrir
 carregarFuncionarios();
 
 
 
-// ===============================
-// FUNÇÃO PARA PEGAR CURSO
-// ===============================
 
 function pegarCurso(dificuldade){
 
@@ -73,9 +69,6 @@ function pegarCurso(dificuldade){
 
 
 
-// ===============================
-// BUSCAR FUNCIONÁRIOS FIREBASE
-// ===============================
 
 async function carregarFuncionarios(){
 
@@ -119,10 +112,6 @@ async function carregarFuncionarios(){
 
 
 
-
-// ===============================
-// MOSTRAR FUNCIONÁRIOS
-// ===============================
 
 function mostrarFuncionarios(){
 
@@ -188,9 +177,7 @@ ${funcionario.nome}
 
 
 
-// ===============================
-// PESQUISAR FUNCIONÁRIO
-// ===============================
+
 
 function pesquisarFuncionario(){
 
@@ -259,9 +246,6 @@ lista.innerHTML += `
 
 
 
-// ===============================
-// VOLTAR
-// ===============================
 
 function voltarDashboard(){
 
