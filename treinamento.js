@@ -23,9 +23,7 @@ carregarTreinamentos();
 
 
 
-// ==========================================
-// CARREGAR TREINAMENTOS
-// ==========================================
+
 
 
 async function carregarTreinamentos(){
@@ -164,9 +162,6 @@ async function carregarTreinamentos(){
 
 
 
-// ==========================================
-// MOSTRAR TABELA
-// ==========================================
 
 
 function mostrarTabela(lista){
@@ -301,9 +296,7 @@ function mostrarTabela(lista){
 
 
 
-// ==========================================
-// ALTERAR STATUS
-// ==========================================
+
 
 
 async function alterarStatus(id,status){
@@ -374,9 +367,7 @@ window.alterarStatus = alterarStatus;
 
 
 
-// ==========================================
-// CARDS
-// ==========================================
+
 
 
 function atualizarCards(){
@@ -429,11 +420,6 @@ function atualizarCards(){
 
 
 
-// ==========================================
-// FILTROS
-// ==========================================
-
-
 window.filtrarStatus = function(status){
 
 
@@ -469,11 +455,6 @@ window.filtrarStatus = function(status){
 
 
 
-
-
-// ==========================================
-// CURSOS
-// ==========================================
 
 
 function pegarCurso(dificuldade){
@@ -534,12 +515,6 @@ function pegarCurso(dificuldade){
 
 
 
-
-
-
-// ==========================================
-// INSTITUIÇÕES
-// ==========================================
 
 
 function pegarInstituicao(dificuldade){
