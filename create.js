@@ -61,5 +61,5 @@ async function cadastrarFuncionario() {
 
 }
 
-// Torna a função acessível ao onclick do HTML
+
 window.cadastrarFuncionario = cadastrarFuncionario;
