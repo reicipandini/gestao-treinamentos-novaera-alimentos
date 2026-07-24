@@ -1,6 +1,3 @@
-// ===============================
-// READ.JS
-// ===============================
 
 import { listarFuncionarios } from "./storage.js";
 
@@ -56,7 +53,7 @@ async function carregarFuncionarios() {
 
 }
 
-// Disponibiliza para outros arquivos
+
 window.carregarFuncionarios = carregarFuncionarios;
 
 // Carrega automaticamente ao abrir a página
