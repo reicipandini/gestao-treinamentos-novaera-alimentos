@@ -1,6 +1,4 @@
-// ===============================
-// SCRIPT.JS
-// ===============================
+
 import { db } from "./firebase.js";
 
 import {
@@ -17,9 +15,7 @@ window.onload = function () {
 
 };
 
-// ===============================
-// PESQUISA
-// ===============================
+
 
 function pesquisarFuncionario() {
 
@@ -43,9 +39,7 @@ function pesquisarFuncionario() {
 
 }
 
-// ===============================
-// SAIR
-// ===============================
+
 
 function sair(){
 
